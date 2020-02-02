@@ -9,5 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
+    - name: List targets
       run: xcodebuild -list -project UIKitCatalog.xcodeproj
+    - name: Build
+      run: xcodebuild build -target UIKitCatalog
